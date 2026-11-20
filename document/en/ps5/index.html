@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <title>PS5 Galberik Userland</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      #console {
+        height: 100%;
+        margin: 0;
+        padding: 20px;
+        font-size: 12px;
+        overflow: auto;
+        box-sizing: border-box;
+        font-family: 'Lucida Console', 'Courier New', 'Menlo', monospace;
+        background-color: #131416;
+        color: #c1c2c5;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="console"></pre>
+    <!-- Cache-bust the entry point: the Guide caches repeated asset URLs. -->
+    <script>
+      (function () {
+        const script = document.createElement('script');
+        script.src = 'src/main.js?v=' + Date.now();
+        script.async = false;
+        document.body.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>

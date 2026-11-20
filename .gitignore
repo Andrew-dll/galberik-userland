@@ -1,0 +1,10 @@
+logs/*
+dump/*
+!dump/.gitkeep
+config/dns.conf
+certs/*.pem
+!certs/localhost.pem
+certs/*.key
+__pycache__/
+*.pyc
+.DS_Store
